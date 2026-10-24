@@ -1,691 +1,207 @@
-<!DOCTYPE html><html class="dark" lang="pt-BR" style="width: 1280px; height: 5479px; overflow: hidden; position: relative;"><head></head><body class="bg-background font-body-md text-on-surface antialiased selection:bg-primary selection:text-on-primary min-h-screen flex flex-col"><svg class="inline-defs-container" aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden"></svg><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_standard" name="shell-type"><title>Legonauts 17731 - FTC Robotics Mentorship Platform</title><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-surface":"#d4e4fa","on-error-container":"#ffdad6","on-secondary-container":"#d6a9ff","primary-fixed":"#e9ddff","surface-tint":"#d0bcff","error":"#ffb4ab","surface-container-low":"#0d1c2d","on-primary-container":"#340080","error-container":"#93000a","on-error":"#690005","on-tertiary-container":"#002d40","surface-variant":"#273647","secondary-fixed-dim":"#ddb7ff","on-primary":"#3c0091","secondary-fixed":"#f0dbff","on-surface-variant":"#cbc3d7","on-tertiary-fixed-variant":"#004c69","on-primary-fixed-variant":"#5516be","primary-container":"#a078ff","on-secondary-fixed":"#2c0051","primary":"#d0bcff","surface-container-lowest":"#010f1f","surface":"#051424","inverse-on-surface":"#233143","tertiary-fixed-dim":"#7bd0ff","on-primary-fixed":"#23005c","on-secondary":"#490080","inverse-surface":"#d4e4fa","on-secondary-fixed-variant":"#6900b3","surface-container":"#122131","secondary-container":"#6f00be","outline":"#958ea0","inverse-primary":"#6d3bd7","secondary":"#ddb7ff","primary-fixed-dim":"#d0bcff","outline-variant":"#494454","surface-container-high":"#1c2b3c","tertiary":"#7bd0ff","surface-dim":"#051424","surface-bright":"#2c3a4c","on-tertiary":"#00354a","on-background":"#d4e4fa","surface-container-highest":"#273647","tertiary-container":"#009bd1","background":"#051424","tertiary-fixed":"#c4e7ff","on-tertiary-fixed":"#001e2c"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-xs":"0.25rem","gutter-mobile":"1rem","space-md":"1rem","margin":"3rem","space-lg":"1.5rem","gutter":"1.5rem","space-sm":"0.5rem","margin-mobile":"1.25rem","space-xl":"2.5rem"},"fontFamily":{"headline-md":["Plus Jakarta Sans"],"body-lg":["Inter"],"label-code":["Inter"],"headline-sm":["Plus Jakarta Sans"],"headline-lg-mobile":["Plus Jakarta Sans"],"body-sm":["Inter"],"headline-lg":["Plus Jakarta Sans"],"label-caps":["Plus Jakarta Sans"],"display-hero-mobile":["Plus Jakarta Sans"],"display-hero":["Plus Jakarta Sans"],"body-md":["Inter"]},"fontSize":{"headline-md":["1.5rem",{"lineHeight":"2rem","fontWeight":"600"}],"body-lg":["1.125rem",{"lineHeight":"1.75rem","fontWeight":"400"}],"label-code":["0.75rem",{"lineHeight":"1rem","letterSpacing":"0.08em","fontWeight":"600"}],"headline-sm":["1.25rem",{"lineHeight":"1.75rem","fontWeight":"600"}],"headline-lg-mobile":["1.75rem",{"lineHeight":"2.25rem","letterSpacing":"-0.01em","fontWeight":"700"}],"body-sm":["0.875rem",{"lineHeight":"1.25rem","fontWeight":"400"}],"headline-lg":["2.25rem",{"lineHeight":"2.75rem","letterSpacing":"-0.02em","fontWeight":"700"}],"label-caps":["0.75rem",{"lineHeight":"1rem","letterSpacing":"0.12em","fontWeight":"700"}],"display-hero-mobile":["2.75rem",{"lineHeight":"3.25rem","letterSpacing":"-0.02em","fontWeight":"800"}],"display-hero":["4.5rem",{"lineHeight":"5rem","letterSpacing":"-0.03em","fontWeight":"800"}],"body-md":["1rem",{"lineHeight":"1.5rem","fontWeight":"400"}]}}}};</script><svg class="inline-defs-container" aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden"></svg><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_standard" name="shell-type"><title>Legonauts 17731 - FTC Robotics Mentorship Platform</title><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-surface":"#d4e4fa","on-error-container":"#ffdad6","on-secondary-container":"#d6a9ff","primary-fixed":"#e9ddff","surface-tint":"#d0bcff","error":"#ffb4ab","surface-container-low":"#0d1c2d","on-primary-container":"#340080","error-container":"#93000a","on-error":"#690005","on-tertiary-container":"#002d40","surface-variant":"#273647","secondary-fixed-dim":"#ddb7ff","on-primary":"#3c0091","secondary-fixed":"#f0dbff","on-surface-variant":"#cbc3d7","on-tertiary-fixed-variant":"#004c69","on-primary-fixed-variant":"#5516be","primary-container":"#a078ff","on-secondary-fixed":"#2c0051","primary":"#d0bcff","surface-container-lowest":"#010f1f","surface":"#051424","inverse-on-surface":"#233143","tertiary-fixed-dim":"#7bd0ff","on-primary-fixed":"#23005c","on-secondary":"#490080","inverse-surface":"#d4e4fa","on-secondary-fixed-variant":"#6900b3","surface-container":"#122131","secondary-container":"#6f00be","outline":"#958ea0","inverse-primary":"#6d3bd7","secondary":"#ddb7ff","primary-fixed-dim":"#d0bcff","outline-variant":"#494454","surface-container-high":"#1c2b3c","tertiary":"#7bd0ff","surface-dim":"#051424","surface-bright":"#2c3a4c","on-tertiary":"#00354a","on-background":"#d4e4fa","surface-container-highest":"#273647","tertiary-container":"#009bd1","background":"#051424","tertiary-fixed":"#c4e7ff","on-tertiary-fixed":"#001e2c"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-xs":"0.25rem","gutter-mobile":"1rem","space-md":"1rem","margin":"3rem","space-lg":"1.5rem","gutter":"1.5rem","space-sm":"0.5rem","margin-mobile":"1.25rem","space-xl":"2.5rem"},"fontFamily":{"headline-md":["Plus Jakarta Sans"],"body-lg":["Inter"],"label-code":["Inter"],"headline-sm":["Plus Jakarta Sans"],"headline-lg-mobile":["Plus Jakarta Sans"],"body-sm":["Inter"],"headline-lg":["Plus Jakarta Sans"],"label-caps":["Plus Jakarta Sans"],"display-hero-mobile":["Plus Jakarta Sans"],"display-hero":["Plus Jakarta Sans"],"body-md":["Inter"]},"fontSize":{"headline-md":["1.5rem",{"lineHeight":"2rem","fontWeight":"600"}],"body-lg":["1.125rem",{"lineHeight":"1.75rem","fontWeight":"400"}],"label-code":["0.75rem",{"lineHeight":"1rem","letterSpacing":"0.08em","fontWeight":"600"}],"headline-sm":["1.25rem",{"lineHeight":"1.75rem","fontWeight":"600"}],"headline-lg-mobile":["1.75rem",{"lineHeight":"2.25rem","letterSpacing":"-0.01em","fontWeight":"700"}],"body-sm":["0.875rem",{"lineHeight":"1.25rem","fontWeight":"400"}],"headline-lg":["2.25rem",{"lineHeight":"2.75rem","letterSpacing":"-0.02em","fontWeight":"700"}],"label-caps":["0.75rem",{"lineHeight":"1rem","letterSpacing":"0.12em","fontWeight":"700"}],"display-hero-mobile":["2.75rem",{"lineHeight":"3.25rem","letterSpacing":"-0.02em","fontWeight":"800"}],"display-hero":["4.5rem",{"lineHeight":"5rem","letterSpacing":"-0.03em","fontWeight":"800"}],"body-md":["1rem",{"lineHeight":"1.5rem","fontWeight":"400"}]}}}};</script><svg class="inline-defs-container" aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden"></svg><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_standard" name="shell-type"><title>Legonauts 17731 - FTC Robotics Mentorship Platform</title><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-surface":"#d4e4fa","on-error-container":"#ffdad6","on-secondary-container":"#d6a9ff","primary-fixed":"#e9ddff","surface-tint":"#d0bcff","error":"#ffb4ab","surface-container-low":"#0d1c2d","on-primary-container":"#340080","error-container":"#93000a","on-error":"#690005","on-tertiary-container":"#002d40","surface-variant":"#273647","secondary-fixed-dim":"#ddb7ff","on-primary":"#3c0091","secondary-fixed":"#f0dbff","on-surface-variant":"#cbc3d7","on-tertiary-fixed-variant":"#004c69","on-primary-fixed-variant":"#5516be","primary-container":"#a078ff","on-secondary-fixed":"#2c0051","primary":"#d0bcff","surface-container-lowest":"#010f1f","surface":"#051424","inverse-on-surface":"#233143","tertiary-fixed-dim":"#7bd0ff","on-primary-fixed":"#23005c","on-secondary":"#490080","inverse-surface":"#d4e4fa","on-secondary-fixed-variant":"#6900b3","surface-container":"#122131","secondary-container":"#6f00be","outline":"#958ea0","inverse-primary":"#6d3bd7","secondary":"#ddb7ff","primary-fixed-dim":"#d0bcff","outline-variant":"#494454","surface-container-high":"#1c2b3c","tertiary":"#7bd0ff","surface-dim":"#051424","surface-bright":"#2c3a4c","on-tertiary":"#00354a","on-background":"#d4e4fa","surface-container-highest":"#273647","tertiary-container":"#009bd1","background":"#051424","tertiary-fixed":"#c4e7ff","on-tertiary-fixed":"#001e2c"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-xs":"0.25rem","gutter-mobile":"1rem","space-md":"1rem","margin":"3rem","space-lg":"1.5rem","gutter":"1.5rem","space-sm":"0.5rem","margin-mobile":"1.25rem","space-xl":"2.5rem"},"fontFamily":{"headline-md":["Plus Jakarta Sans"],"body-lg":["Inter"],"label-code":["Inter"],"headline-sm":["Plus Jakarta Sans"],"headline-lg-mobile":["Plus Jakarta Sans"],"body-sm":["Inter"],"headline-lg":["Plus Jakarta Sans"],"label-caps":["Plus Jakarta Sans"],"display-hero-mobile":["Plus Jakarta Sans"],"display-hero":["Plus Jakarta Sans"],"body-md":["Inter"]},"fontSize":{"headline-md":["1.5rem",{"lineHeight":"2rem","fontWeight":"600"}],"body-lg":["1.125rem",{"lineHeight":"1.75rem","fontWeight":"400"}],"label-code":["0.75rem",{"lineHeight":"1rem","letterSpacing":"0.08em","fontWeight":"600"}],"headline-sm":["1.25rem",{"lineHeight":"1.75rem","fontWeight":"600"}],"headline-lg-mobile":["1.75rem",{"lineHeight":"2.25rem","letterSpacing":"-0.01em","fontWeight":"700"}],"body-sm":["0.875rem",{"lineHeight":"1.25rem","fontWeight":"400"}],"headline-lg":["2.25rem",{"lineHeight":"2.75rem","letterSpacing":"-0.02em","fontWeight":"700"}],"label-caps":["0.75rem",{"lineHeight":"1rem","letterSpacing":"0.12em","fontWeight":"700"}],"display-hero-mobile":["2.75rem",{"lineHeight":"3.25rem","letterSpacing":"-0.02em","fontWeight":"800"}],"display-hero":["4.5rem",{"lineHeight":"5rem","letterSpacing":"-0.03em","fontWeight":"800"}],"body-md":["1rem",{"lineHeight":"1.5rem","fontWeight":"400"}]}}}};</script><svg class="inline-defs-container" aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden"></svg><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_standard" name="shell-type"><title>Legonauts 17731 - FTC Robotics Mentorship Platform</title><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-surface":"#d4e4fa","on-error-container":"#ffdad6","on-secondary-container":"#d6a9ff","primary-fixed":"#e9ddff","surface-tint":"#d0bcff","error":"#ffb4ab","surface-container-low":"#0d1c2d","on-primary-container":"#340080","error-container":"#93000a","on-error":"#690005","on-tertiary-container":"#002d40","surface-variant":"#273647","secondary-fixed-dim":"#ddb7ff","on-primary":"#3c0091","secondary-fixed":"#f0dbff","on-surface-variant":"#cbc3d7","on-tertiary-fixed-variant":"#004c69","on-primary-fixed-variant":"#5516be","primary-container":"#a078ff","on-secondary-fixed":"#2c0051","primary":"#d0bcff","surface-container-lowest":"#010f1f","surface":"#051424","inverse-on-surface":"#233143","tertiary-fixed-dim":"#7bd0ff","on-primary-fixed":"#23005c","on-secondary":"#490080","inverse-surface":"#d4e4fa","on-secondary-fixed-variant":"#6900b3","surface-container":"#122131","secondary-container":"#6f00be","outline":"#958ea0","inverse-primary":"#6d3bd7","secondary":"#ddb7ff","primary-fixed-dim":"#d0bcff","outline-variant":"#494454","surface-container-high":"#1c2b3c","tertiary":"#7bd0ff","surface-dim":"#051424","surface-bright":"#2c3a4c","on-tertiary":"#00354a","on-background":"#d4e4fa","surface-container-highest":"#273647","tertiary-container":"#009bd1","background":"#051424","tertiary-fixed":"#c4e7ff","on-tertiary-fixed":"#001e2c"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-xs":"0.25rem","gutter-mobile":"1rem","space-md":"1rem","margin":"3rem","space-lg":"1.5rem","gutter":"1.5rem","space-sm":"0.5rem","margin-mobile":"1.25rem","space-xl":"2.5rem"},"fontFamily":{"headline-md":["Plus Jakarta Sans"],"body-lg":["Inter"],"label-code":["Inter"],"headline-sm":["Plus Jakarta Sans"],"headline-lg-mobile":["Plus Jakarta Sans"],"body-sm":["Inter"],"headline-lg":["Plus Jakarta Sans"],"label-caps":["Plus Jakarta Sans"],"display-hero-mobile":["Plus Jakarta Sans"],"display-hero":["Plus Jakarta Sans"],"body-md":["Inter"]},"fontSize":{"headline-md":["1.5rem",{"lineHeight":"2rem","fontWeight":"600"}],"body-lg":["1.125rem",{"lineHeight":"1.75rem","fontWeight":"400"}],"label-code":["0.75rem",{"lineHeight":"1rem","letterSpacing":"0.08em","fontWeight":"600"}],"headline-sm":["1.25rem",{"lineHeight":"1.75rem","fontWeight":"600"}],"headline-lg-mobile":["1.75rem",{"lineHeight":"2.25rem","letterSpacing":"-0.01em","fontWeight":"700"}],"body-sm":["0.875rem",{"lineHeight":"1.25rem","fontWeight":"400"}],"headline-lg":["2.25rem",{"lineHeight":"2.75rem","letterSpacing":"-0.02em","fontWeight":"700"}],"label-caps":["0.75rem",{"lineHeight":"1rem","letterSpacing":"0.12em","fontWeight":"700"}],"display-hero-mobile":["2.75rem",{"lineHeight":"3.25rem","letterSpacing":"-0.02em","fontWeight":"800"}],"display-hero":["4.5rem",{"lineHeight":"5rem","letterSpacing":"-0.03em","fontWeight":"800"}],"body-md":["1rem",{"lineHeight":"1.5rem","fontWeight":"400"}]}}}};</script><header class="fixed top-0 left-0 right-0 z-50 bg-background/85 backdrop-blur-xl border-b border-outline-variant/20 shadow-[0_4px_20px_rgba(0,0,0,0.5)]"><div class="h-20 max-w-7xl mx-auto px-6 flex items-center justify-between gap-6"><a href="#" class="flex items-center gap-3.5 shrink-0 group"><div class="relative w-11 h-11 rounded-full overflow-hidden flex items-center justify-center bg-surface-container-high border border-outline-variant/30 shrink-0 group-hover:border-tertiary/60 transition-all"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZ3-NYERoq9BfcRClEG6qqUeCwTeGJeIzczFm6OElG75BQbUpC1LP1HK6tkgNZBLahmGgoGXQo1g9hL6ORSOwj5pXPWGOkCVMgvxUNC8EIHEJcQhJT40NG2FcA-G3dQaBAKsqsxlqrx3QTUQcp4n3vMSnETH65o-oTfM90V_DjHBo21O5rwrjSBdpt2ZuPibt6teneXfPzEy2AVNnI3jDhncMkgQAIQm6RH4FquHm-3c7cyS-la2-mQHwbr_gEZP-UMyE" alt="Logo Legonautas 17731" class="w-full h-full object-cover rounded-full" style="transform: scale(1.08); object-position: center center;"></div><div class="flex flex-col"><div class="flex items-center gap-2"><span class="font-headline-sm text-[1.15rem] font-extrabold tracking-tight text-on-surface leading-tight">LEGONAUTAS</span><span class="font-label-code text-[11px] px-2 py-0.5 rounded bg-surface-container-high text-tertiary border border-tertiary/30 font-semibold tracking-wider leading-none">#17731</span></div><span class="font-label-caps text-[10px] tracking-widest text-on-surface-variant uppercase mt-0.5 font-bold">Mentoria // FTC 17731</span></div></a><nav class="hidden xl:flex items-center gap-1.5"><a aria-current="page" class="px-3.5 py-2 rounded-lg text-body-sm font-semibold bg-surface-container-high text-tertiary border border-tertiary/30 transition-all" data-path="trilhas" href="#">Trilhas</a><a class="px-3.5 py-2 rounded-lg text-body-sm font-medium text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all" data-path="robo-e-engenharia" href="#">Robô &amp; Engenharia</a><a class="px-3.5 py-2 rounded-lg text-body-sm font-medium text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all" data-path="programacao-e-autonomo" href="#">Programação &amp; Autônomo</a><a class="px-3.5 py-2 rounded-lg text-body-sm font-medium text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all" data-path="caderno-de-engenharia" href="#">Caderno de Engenharia</a></nav><div class="flex items-center gap-3 shrink-0"><div class="hidden sm:flex items-center bg-surface-container rounded-lg p-1 border border-outline-variant/30"><button class="px-2.5 py-1 rounded text-xs font-semibold bg-surface-container-high text-on-surface border border-outline-variant/30 transition-all" type="button">PT</button><button class="px-2.5 py-1 rounded text-xs font-medium text-on-surface-variant hover:text-on-surface transition-all" type="button">EN</button></div><a aria-label="Comunidade Discord" class="p-2.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-tertiary border border-outline-variant/20 hover:border-tertiary/30 transition-all flex items-center justify-center shadow-sm" data-path="comunidade-e-discord" href="#"><span class="material-symbols-outlined text-[20px]">forum</span></a><a class="inline-flex items-center gap-2 px-4 sm:px-5 py-2.5 rounded-xl bg-gradient-to-r from-secondary-container via-primary-container to-secondary text-on-primary font-headline-sm text-body-sm font-bold border border-secondary/40 shadow-[0_0_16px_rgba(160,120,255,0.35)] hover:shadow-[0_0_24px_rgba(160,120,255,0.65)] hover:scale-105 transition-all" data-path="mentorias-1-on-1" href="#"><span class="">Quero Mentoria</span><span class="material-symbols-outlined text-[18px]">rocket_launch</span></a></div></div></header><main class="w-full pt-20 bg-background flex-1"><div class="flex flex-col w-full relative overflow-hidden">
-<!-- Subtle Ambient Glow & Orbit Grid Backdrop -->
-<div class="absolute inset-0 pointer-events-none select-none overflow-hidden">
-<!-- Starfield Nodes -->
-<svg class="absolute w-full h-full opacity-25" xmlns="http://www.w3.org/2000/svg">
-<defs>
-<radialGradient cx="50%" cy="30%" id="orbitGlow" r="50%">
-<stop offset="0%" stop-color="#8B5CF6" stop-opacity="0.18"></stop>
-<stop offset="100%" stop-color="#051424" stop-opacity="0"></stop>
-</radialGradient>
-</defs>
-<rect fill="url(#orbitGlow)" height="100%" width="100%"></rect>
-<!-- Orbital Ellipses -->
-<ellipse cx="50%" cy="380" fill="none" opacity="0.35" rx="680" ry="240" stroke="#a078ff" stroke-dasharray="4 8" stroke-width="0.75"></ellipse>
-<ellipse cx="50%" cy="380" fill="none" opacity="0.2" rx="940" ry="340" stroke="#7bd0ff" stroke-dasharray="3 12" stroke-width="0.5"></ellipse>
-<!-- Constellation Telemetry Dots -->
-<circle cx="18%" cy="180" fill="#d0bcff" opacity="0.7" r="1.5"></circle>
-<circle cx="82%" cy="220" fill="#7bd0ff" opacity="0.6" r="1.5"></circle>
-<circle cx="28%" cy="440" fill="#d0bcff" opacity="0.5" r="1"></circle>
-<circle cx="74%" cy="510" fill="#a078ff" opacity="0.8" r="2"></circle>
-<circle cx="12%" cy="690" fill="#d0bcff" opacity="0.4" r="1.5"></circle>
-<circle cx="90%" cy="760" fill="#7bd0ff" opacity="0.5" r="1.5"></circle>
-<circle cx="45%" cy="140" fill="#ffffff" opacity="0.6" r="1"></circle>
-<circle cx="58%" cy="620" fill="#d0bcff" opacity="0.5" r="1.2"></circle>
-</svg>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Legonautas Mentora</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#040b1a;--c:#0a1428;--l:#15243f;--p:#8b5cf6;--a:#5fc0f2;--tx:#eef4ff;--mu:#9fb0cf;--f:'Plus Jakarta Sans','Segoe UI',system-ui,sans-serif;
+box-sizing:border-box;color-scheme:dark;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;background:var(--bg);color:var(--tx);font:400 14px/1.6 var(--f);overflow-x:hidden;background-image:radial-gradient(55% 35% at 12% 100%,#5b21b633,transparent),radial-gradient(45% 30% at 92% 45%,#0c3a7a22,transparent)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:60}
+body::after{content:"";position:fixed;left:0;top:0;bottom:0;width:34px;background:radial-gradient(#ffffff2e 1px,transparent 1.3px) 0 0/10px 10px;border-left:2px solid #7c3aed;pointer-events:none;-webkit-mask:linear-gradient(90deg,#000,transparent);mask:linear-gradient(90deg,#000,transparent)}
+a{color:inherit;text-decoration:none}
+.i{width:1em;height:1em;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;vertical-align:-.16em;flex:none}
+.w{max-width:1060px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:calc(env(safe-area-inset-top,0px) + 10px);z-index:50;max-width:1100px;margin:10px auto 0;width:calc(100% - 24px);background:#050d1fee;backdrop-filter:blur(10px);border:1px solid var(--l);border-radius:14px;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:8px 14px}
+.brand{display:flex;align-items:center;gap:10px}
+.brand img{width:34px;height:34px;border-radius:50%;border:2px solid #7c3aed;background:#000}
+.brand b{font-size:13px;font-weight:800;letter-spacing:.01em}
+.brand i{font-style:normal;font-size:9px;font-weight:700;color:var(--a);background:#0d2a45;border:1px solid #1d4468;padding:1px 6px;border-radius:4px;margin-left:8px;vertical-align:2px}
+.brand small{display:block;font-size:7.5px;font-weight:800;letter-spacing:.12em;color:var(--mu);line-height:1.2}
+nav{display:flex;gap:6px;flex:1;justify-content:center}
+nav a{padding:6px 12px;border-radius:8px;font-size:11.5px;font-weight:500;color:var(--mu);line-height:1.25;border:1px solid transparent;min-width:96px}
+nav a.on{background:#0f2238;border-color:#1c3b57;color:var(--a);font-weight:700;display:grid;place-items:center;min-width:64px}
+.rt{display:flex;gap:8px;align-items:center}
+.lang{display:flex;gap:2px;background:#0a1428;border:1px solid var(--l);border-radius:8px;padding:3px;font-size:9.5px;font-weight:700;color:var(--mu)}
+.lang span{padding:5px 8px;border-radius:5px}.lang .on{background:#14233f;color:#fff}
+.ic{width:34px;height:34px;border:1px solid var(--l);background:#0a1428;border-radius:9px;display:grid;place-items:center;color:var(--tx);font-size:15px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 18px;border-radius:9px;font:700 12px var(--f);border:1px solid #1e3a5f;background:#0a1830;color:#fff;cursor:pointer;white-space:nowrap}
+.btn:hover{border-color:var(--a)}
+.btn.pri{background:linear-gradient(90deg,#7c2ae8,#d4bcf8);border:0;color:#15072e;box-shadow:0 0 22px #8b5cf655}
+:focus-visible{outline:2px solid var(--a);outline-offset:3px}
+.pill{display:inline-block;font-size:9px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--a);background:#0c2038;border:1px solid #1b4064;padding:4px 12px;border-radius:99px}
+.hero{position:relative;text-align:center;padding:46px 0 10px;overflow:hidden}
+.hero::before{content:"17731";position:absolute;left:50%;top:50px;transform:translateX(-50%);font-size:clamp(8rem,30vw,18rem);font-weight:800;color:#ffffff08;line-height:1}
+.hero>*{position:relative}
+h1{font-size:clamp(2.6rem,8.6vw,4.8rem);line-height:1.04;font-weight:800;letter-spacing:-.025em;margin:22px 0 14px;text-transform:uppercase;color:#e9f2ff}
+.sub{display:flex;align-items:center;justify-content:center;gap:12px;font-size:8.5px;letter-spacing:.2em;color:var(--mu);font-weight:700}
+.sub::before,.sub::after{content:"";width:30px;height:1px;background:#2a3a5c}
+.g2{display:grid;grid-template-columns:1.12fr .88fr;gap:38px;align-items:center;margin-top:50px;text-align:left}
+.tag{display:inline-block;font-size:8.5px;font-weight:700;letter-spacing:.14em;color:var(--a);border-left:2px solid var(--a);background:#0c2038;padding:3px 10px;margin-bottom:14px}
+.g2 h2{font-size:clamp(1.5rem,3.3vw,2.05rem);line-height:1.22;font-weight:800;margin:0 0 14px}
+.g2 p{color:var(--mu);margin:0 0 12px;font-size:12.5px}.g2 p b{color:#fff}
+.g2 .it{font-style:italic;color:var(--a);font-size:12px}
+.row{display:flex;gap:10px;flex-wrap:wrap;margin:20px 0 16px}
+.chk{display:flex;gap:18px;font-size:10.5px;color:var(--mu);flex-wrap:wrap}.chk .i{color:var(--a);margin-right:4px}
+.card{background:var(--c);border:1px solid var(--l);border-radius:14px;padding:20px}
+.team{padding:20px 22px;text-align:center}
+.team .t{display:flex;justify-content:space-between;align-items:center;font-size:8px;font-weight:700;letter-spacing:.12em;color:var(--a);margin-bottom:14px}
+.team .t em{font-style:normal;border:1px solid #1b4064;background:#0c2038;padding:2px 8px;border-radius:5px}
+.team img{width:112px;height:112px;border-radius:50%;box-shadow:0 0 36px #7c3aed55}
+.st{font-size:8px;letter-spacing:.14em;font-weight:800;color:var(--a);border-top:1px solid var(--l);margin-top:16px;padding-top:12px}.st::before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--a);margin-right:7px}
+.team h3{margin:6px 0 4px;font-size:15px;font-weight:800}.team p{font-size:11px;color:var(--mu);margin:0}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:34px;text-align:left}
+.stats .card{padding:14px 16px}
+.stats small{font-size:8px;letter-spacing:.08em;color:var(--a);font-weight:700;display:flex;justify-content:space-between;text-transform:uppercase}
+.stats b{display:block;font-size:26px;font-weight:800;margin:6px 0 2px}.stats b i{font-size:9px;color:var(--a);font-style:normal;margin-left:4px;font-weight:700}
+.stats span{font-size:10.5px;color:var(--mu);line-height:1.45;display:block}
+section{padding:56px 0 20px}
+.hd{display:flex;justify-content:space-between;align-items:end;gap:16px;flex-wrap:wrap;margin-bottom:26px}
+.hd h2{font-size:clamp(1.4rem,3vw,1.85rem);font-weight:800;margin:10px 0 8px}.hd p{margin:0;color:var(--mu);max-width:560px;font-size:12.5px}
+.lk{color:var(--a);font-size:11.5px;font-weight:700;display:inline-flex;align-items:center;gap:6px}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.mod,.ph{display:flex;flex-direction:column}
+.ib{width:36px;height:36px;border-radius:10px;background:#0f2238;border:1px solid #1c3b57;display:grid;place-items:center;color:var(--a);font-size:16px;margin-bottom:16px}
+.mod small,.ph small{font-size:8px;letter-spacing:.14em;color:var(--mu);font-weight:800}
+.mod h3,.ph h3{font-size:15px;line-height:1.25;margin:4px 0 8px;font-weight:800}
+.mod p,.ph p{font-size:11px;color:var(--mu);margin:0 0 12px}
+.tg{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:16px}.tg i{font-style:normal;font-size:8px;border:1px solid var(--l);background:#0a1a33;color:var(--mu);padding:2px 7px;border-radius:5px}
+.mod .lk,.ph .lk{margin-top:auto;font-size:10.5px}
+.bd{display:flex;gap:8px;flex-wrap:wrap}.bd span{font-size:10px;font-weight:700;border:1px solid var(--l);background:#0a1a33;padding:6px 12px;border-radius:9px;display:inline-flex;gap:6px;align-items:center}.bd .i{color:var(--a)}
+.ph .n{align-self:flex-end;font-size:8px;font-weight:700;letter-spacing:.1em;border:1px solid var(--l);background:#0a1a33;color:var(--mu);padding:2px 8px;border-radius:5px;margin-bottom:-8px}
+.ph .ib{margin-bottom:14px}
+.ph.hi{background:#0c1636;border-color:#33408f;box-shadow:0 0 34px #6d28d922}.ph.hi .n{color:#c4a7ff;border-color:#5b3fb0;background:#1b1542}
+.ph ul{list-style:none;padding:0;margin:0 0 12px;font-size:11px;color:var(--mu)}.ph li{margin-bottom:7px;display:flex;gap:7px}.ph li .i{color:var(--a);margin-top:3px}.ph li b{color:#fff;font-weight:700}
+.cta{display:flex;align-items:center;gap:16px;margin-top:22px;flex-wrap:wrap;background:linear-gradient(90deg,#0a1428 30%,#1a0f4a)}
+.cta .ib{margin:0;border-radius:50%;background:#1d1550;border-color:#3a2a8a;color:#c4a7ff}
+.cta .tx{flex:1;min-width:220px}.cta h3{margin:0 0 2px;font-size:13.5px;font-weight:800}.cta p{margin:0;font-size:10.5px;color:var(--mu)}
+.flow{text-align:center}.flow h2{font-size:clamp(1.5rem,3.4vw,2.1rem);margin:14px 0 8px;font-weight:800}.flow>.w>p{color:var(--mu);margin:0 auto 30px;max-width:470px;font-size:12.5px}
+.flow .card{text-align:left}.flow .t{display:flex;justify-content:space-between;font-size:8.5px;font-weight:800;letter-spacing:.12em;color:var(--a);margin-bottom:22px}.flow .t b{color:var(--mu);font-size:11px}
+.flow h3{font-size:15px;margin:0 0 8px;font-weight:800}.flow p.d{font-size:11.5px;color:var(--mu);margin:0 0 14px}.flow ul{list-style:none;padding:0;margin:0;font-size:11px;color:var(--mu)}.flow li{margin-bottom:5px}.flow li .i{color:var(--a);margin-right:6px}
+.dep{padding:24px}.dep h2{font-size:1.45rem;font-weight:800;margin:10px 0 18px}
+.q{background:#0a1a33;border:1px solid var(--l);border-radius:12px;padding:18px;font-style:italic;font-size:11.5px;color:#cbd8f3;display:flex;flex-direction:column;justify-content:space-between;gap:14px}
+.q div{display:flex;gap:10px;align-items:center;font-style:normal}.q em{width:28px;height:28px;border-radius:50%;background:#7c3aed;display:grid;place-items:center;font-weight:800;font-style:normal;font-size:12px}.q b{display:block;font-size:11.5px;color:#fff}.q span{font-size:9.5px;color:var(--mu)}
+.fin{text-align:center;padding:50px 24px;background:radial-gradient(70% 100% at 50% 0,#14264f,var(--c))}
+.fin h2{font-size:clamp(1.6rem,4.2vw,2.5rem);line-height:1.2;font-weight:800;max-width:520px;margin:14px auto;color:#b8cdf5}.fin p{color:var(--mu);max-width:500px;margin:0 auto;font-size:12px}
+footer{border-top:1px solid var(--l);padding:34px 0 20px;margin-top:40px;font-size:11px;color:var(--mu)}
+.fg{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:28px}
+footer h4{font-size:8.5px;letter-spacing:.14em;color:var(--a);margin:0 0 12px;text-transform:uppercase}footer a{display:block;margin-bottom:7px}footer a:hover{color:#fff}footer p{margin:8px 0 12px}
+.so{display:flex;gap:8px}.so .ic{width:30px;height:30px;font-size:13px}
+.cp{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;border-top:1px solid var(--l);margin-top:26px;padding-top:16px;font-size:9.5px}
+@media(max-width:960px){nav{display:none}header{justify-content:space-between}.g2,.g3,.fg{grid-template-columns:1fr}.g4,.stats{grid-template-columns:1fr 1fr}.g3[style]{grid-template-columns:1fr!important}}
+@media(max-width:520px){.g4,.stats{grid-template-columns:1fr}.lang,.rt .ic{display:none}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="rk" viewBox="0 0 24 24"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09zM12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2zM9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></symbol>
+<symbol id="ms" viewBox="0 0 24 24"><path d="M14 9a2 2 0 0 1-2 2H6l-4 4V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2zM18 9h2a2 2 0 0 1 2 2v11l-4-4h-6a2 2 0 0 1-2-2v-1"/></symbol>
+<symbol id="ck" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+<symbol id="us" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/><circle cx="9" cy="7" r="4"/></symbol>
+<symbol id="bk" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></symbol>
+<symbol id="sh" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10zM9 12l2 2 4-4"/></symbol>
+<symbol id="ci" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14M22 4 12 14.01l-3-3"/></symbol>
+<symbol id="gc" viewBox="0 0 24 24"><path d="M22 10 12 5 2 10l10 5zM6 12v5c3 3 9 3 12 0v-5"/></symbol>
+<symbol id="cp" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16.24 7.76-2.12 6.36-6.36 2.12 2.12-6.36z"/></symbol>
+<symbol id="cu" viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16zM3.3 7 12 12l8.7-5M12 22V12"/></symbol>
+<symbol id="tm" viewBox="0 0 24 24"><path d="m4 17 6-6-6-6M12 19h8"/></symbol>
+<symbol id="pn" viewBox="0 0 24 24"><path d="M12 20h9M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4z"/></symbol>
+<symbol id="fl" viewBox="0 0 24 24"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1zM4 22v-7"/></symbol>
+<symbol id="ft" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8zM14 2v6h6M16 13H8M16 17H8"/></symbol>
+<symbol id="ar" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></symbol>
+<symbol id="ch" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol>
+<symbol id="yt" viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.94 2c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58zM9.75 15.02l5.75-3.02-5.75-3.02z"/></symbol>
+<symbol id="ig" viewBox="0 0 24 24"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zM16 11.37a4 4 0 1 1-7.9 1.26 4 4 0 0 1 7.9-1.26zM17.5 6.5h.01"/></symbol>
+<symbol id="tk" viewBox="0 0 24 24"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></symbol>
+</defs></svg>
+
+<header>
+<a class="brand" href="#topo"><img src="logo.png" alt="Logo Legonautas"><span><b>LEGONAUTAS</b><i>#17731</i><small>MENTORIA // FTC 17731</small></span></a>
+<nav><a class="on" href="#trilhas">Trilhas</a><a href="#trilhas">Robô &amp;<br>Engenharia</a><a href="#trilhas">Programação &amp;<br>Autônomo</a><a href="#trilhas">Caderno de<br>Engenharia</a></nav>
+<div class="rt"><div class="lang"><span class="on">PT</span><span>EN</span></div><span class="ic"><svg class="i"><use href="#ms"/></svg></span><a class="btn pri" href="#entrar">Quero Mentoria <svg class="i"><use href="#rk"/></svg></a></div>
+</header>
+
+<main id="topo">
+<div class="hero"><div class="w">
+<span class="pill">Plataforma aberta de capacitação e especialização FTC</span>
+<h1>Legonautas<br>Mentora</h1>
+<div class="sub">FIRST TECH CHALLENGE TEAM #17731</div>
+<div class="g2">
+<div>
+<span class="tag">EQUIPE SESI // PARAÍBA</span>
+<h2>Mentoria de FTC de alto nível, feita de equipe para equipe.</h2>
+<p>O Legonautas Mentora é o programa de mentoria técnica e conhecimento livre da equipe <b>Legonautas</b>. Trilhas práticas de Engenharia mecânica, CAD Onshape, Programação com Pedro Pathing, e Escrita do Portfólio de Engenharia (Engineering Portfolio). Escrito por quem compete — para qualquer equipe ou membro crescer.</p>
+<p class="it">Fácil de aplicar, estruturado para os melhores resultados na arena FTC.</p>
+<div class="row"><a class="btn" href="#entrar">Quero Mentoria Gratuita <svg class="i"><use href="#ar"/></svg></a><a class="btn" href="#trilhas"><svg class="i"><use href="#ft"/></svg> Explorar Trilhas &amp; Docs</a></div>
+<div class="chk"><span><svg class="i"><use href="#ci"/></svg>100% Gratuito</span><span><svg class="i"><use href="#ci"/></svg>Alinhado às Regras Oficiais FIRST</span></div>
 </div>
-<!-- ======================================================== -->
-<!-- HERO SECTION: Matching Space Academy Composition         -->
-<!-- ======================================================== -->
-<section class="relative w-full max-w-7xl mx-auto px-6 pt-12 pb-24 flex flex-col items-center"><!-- Giant Watermark Typography Layer (Crisp Subtle Outline) -->
-<div class="relative w-full flex flex-col items-center justify-center select-none pt-4 pb-2">
-<span class="absolute text-[8.5rem] sm:text-[12rem] lg:text-[16rem] font-black tracking-tighter text-outline-variant/10 leading-none select-none pointer-events-none -translate-y-6">
-        17731
-      </span>
-<!-- Primary Centered Flagship Header -->
-<div class="relative z-10 flex flex-col items-center text-center">
-<div class="flex items-center gap-2 mb-3">
-<span class="w-2 h-2 rounded-full bg-tertiary animate-ping"></span>
-<span class="font-label-code text-label-code uppercase tracking-widest text-tertiary px-3 py-1 rounded bg-surface-container-low border border-tertiary/20">
-            PLATAFORMA ABERTA DE CAPACITAÇÃO E ESPECIALIZAÇÃO FTC
-          </span>
-</div>
-<h1 class="font-display-hero text-headline-lg sm:text-[3.75rem] lg:text-[4.75rem] font-extrabold tracking-tight text-on-surface leading-none text-center">
-          LEGONAUTAS<br>MENTORA</h1>
-<!-- Version Sub-badge with Connected Orbital Line -->
-<div class="inline-flex items-center gap-3 mt-4">
-<span class="h-px w-10 bg-outline-variant/30"></span>
-<span class="font-label-code text-label-code text-on-surface-variant tracking-widest uppercase">First tech challenge TEAM #17731
-          </span>
-<span class="h-px w-10 bg-outline-variant/30"></span>
+<div class="card team">
+<div class="t"><span>● FIRST CANOPY // BIOBUZZ</span><em>TEMPORADA 26/27</em></div>
+<img src="logo.png" alt="Legonautas 17731">
+<div class="st">SISTEMA ATIVO: MENTORIAS ABERTAS</div>
+<h3>Legonautas Robotics #17731</h3>
+<p>Compartilhando telemetria, código e projetos para inspirar e auxiliar novas equipes no Brasil e no mundo.</p>
 </div>
 </div>
+<div class="stats">
+<div class="card"><small>Mentoria Direta <svg class="i"><use href="#ck"/></svg></small><b>X+<i>HRS</i></b><span>De chamadas técnicas ao vivo e acompanhamento.</span></div>
+<div class="card"><small>Pessoas Alcançadas <svg class="i"><use href="#us"/></svg></small><b>X+<i>Pessoas</i></b><span>Apoiadas em CAD, código e preparação para processo seletivo.</span></div>
+<div class="card"><small>Recursos Abertos <svg class="i"><use href="#bk"/></svg></small><b>X+<i>DOCS</i></b><span>Modelos Onshape, bibliotecas Java e checklists.</span></div>
+<div class="card"><small>Gracious Professionalism <svg class="i"><use href="#fl"/></svg></small><b>100%<i>FREE</i></b><span>Iniciativa voluntária sem custos para equipes escolares.</span></div>
 </div>
-<!-- Two-Column Asymmetrical Hero Body -->
-<div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 mt-12 w-full items-center">
-<!-- Left Column: Storytelling, Mission & Calls to Action -->
-<div class="lg:col-span-6 flex flex-col gap-6">
-<div class="flex items-center gap-2">
-<span class="px-3 py-1 rounded bg-surface-container font-label-caps text-label-caps text-tertiary border border-outline-variant/30 tracking-wider uppercase font-bold">
-            EQUIPE SESI // PARAÍBA</span>
-</div>
-<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold leading-tight">
-          Mentoria de FTC de alto nível, feita de equipe para equipe.
-        </h2>
-<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
-          O Legonautas Mentora é o programa de mentoria técnica e conhecimento livre da equipe<strong class="text-on-surface">&nbsp;Legonautas</strong>. Trilhas práticas de Engenharia mecânica, CAD Onshape, Programação com Pedro Pathing, e Escrita do Portfólio de Engenharia (Engineering Portfolio). Escrito por quem compete — para qualquer equipe ou membro crescer.</p>
-<p class="font-body-md text-body-md text-tertiary font-medium italic">
-          Fácil de aplicar, estruturado para os melhores resultados na arena FTC.</p>
-<!-- CTAs -->
-<div class="flex flex-wrap items-center gap-4 pt-2">
-<a class="inline-flex items-center gap-3 px-6 py-3.5 rounded-xl bg-surface-container-high hover:bg-surface-variant text-on-surface hover:text-primary font-headline-sm text-body-md font-bold border border-primary/30 transition-all shadow-md" data-path="mentorias-1-on-1" href="#">
-<span class="">Quero Mentoria Gratuita</span>
-<span class="material-symbols-outlined text-[18px] text-tertiary">arrow_forward</span>
-</a>
-<a class="inline-flex items-center gap-2 px-5 py-3.5 rounded-xl bg-surface-container text-on-surface hover:text-on-surface hover:bg-surface-container-high transition-all font-body-md text-body-md font-semibold border border-outline-variant/20 shadow-sm" data-path="trilhas" href="#">
-<span class="material-symbols-outlined text-[18px] text-on-surface-variant">menu_book</span>
-<span class="">Explorar Trilhas &amp; Docs</span>
-</a>
-</div>
-<!-- Quick Trust Indicators -->
-<div class="flex items-center gap-6 pt-4 text-on-surface-variant font-label-code text-label-code">
-<div class="flex items-center gap-2">
-<span class="material-symbols-outlined text-tertiary text-[18px]">check_circle</span>
-<span class="">100% Gratuito</span>
-</div>
-<div class="flex items-center gap-2">
-<span class="material-symbols-outlined text-primary text-[18px]">verified</span>
-<span class="">Alinhado às Regras Oficiais FIRST</span>
-</div>
-</div>
-</div>
-<!-- Right Column: High-Precision Technical Telemetry Card -->
-<div class="lg:col-span-6 flex justify-center">
-<div class="relative w-full max-w-lg rounded-2xl bg-surface-container-low p-6 sm:p-8 shadow-2xl flex flex-col items-center border border-outline-variant/30">
-<!-- Card Top Telemetry Bar -->
-<div class="w-full flex items-center justify-between font-label-code text-label-code text-on-surface-variant pb-5 border-b border-outline-variant/20">
-<div class="flex items-center gap-2">
-<span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span>
-<span class="text-on-surface tracking-wider font-semibold">FIRST CANOPY // BIOBUZZ</span>
-</div>
-<span class="text-tertiary px-2.5 py-0.5 rounded bg-surface-container border border-tertiary/20 font-bold tracking-wider">TEMPORADA 26/27</span>
-</div>
-<!-- Central Astronaut Visual Representation framed neatly -->
-<div class="relative my-6 flex items-center justify-center">
-<div class="relative w-48 h-48 sm:w-56 sm:h-56 rounded-full p-1.5 bg-surface-container border border-outline-variant/30 flex items-center justify-center shadow-lg">
-<img class="w-full h-full object-contain rounded-full bg-surface-container-lowest" data-alt="Graphic emblem of the Legonauts 17731 FTC robotics team depicting a friendly astronaut in a detailed white space suit waving against a rich deep ultraviolet and cosmic purple circular badge with stars and the text LEGONAUTAS 17731." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwkATiyi0Z_fGXadQo5r24SEk9J5lLCeTEFZ5O4rzZh6NlsGfQp8OhMzgHzg4jUKE8NccGfEAxT7qjAAEvUp8lLpTbDRHXMXKUl6HpSEMLO7GG8-uBNuI0B0ICWmc5hknrVyv72RT8YITDmrT17ZVZLBet-lsQpNF14Fc8TTIT-6yVftCesd9fecbHpI8-T73hrMOgEWF1q-aAN1_JraZ4H7JpjTKgQ88sqbGMbNng_pYy_w5LmHf4eRblI4a6lkN_68a02T1IJ3B7TuI">
-</div>
-</div>
-<!-- Mission Status Display -->
-<div class="w-full text-center flex flex-col items-center mt-2">
-<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container border border-outline-variant/20 text-on-surface font-label-caps text-label-caps tracking-widest">
-<span class="w-2 h-2 rounded-full bg-tertiary"></span>
-<span class="text-tertiary font-bold">SISTEMA ATIVO: MENTORIAS ABERTAS</span>
-</div>
-<p class="font-headline-sm text-headline-sm text-on-surface font-semibold mt-3">
-              Legonautas Robotics #17731
-            </p>
-<p class="font-body-sm text-body-sm text-on-surface-variant max-w-xs mt-1 leading-relaxed">
-              Compartilhando telemetria, código e projetos para inspirar e auxiliar novas equipes no Brasil e no mundo.
-            </p>
-</div>
-</div>
+</div></div>
+
+<section id="trilhas"><div class="w">
+<div class="hd"><div><span class="pill">Pilares de formação</span><h2>Trilhas Técnicas Especializadas</h2><p>Material didático detalhado, diagramas e sessões práticas divididas nas quatro grandes áreas de excelência do FIRST Tech Challenge.</p></div><a class="lk" href="#trilhas">Ver grade completa de módulos <svg class="i"><use href="#ar"/></svg></a></div>
+<div class="g4">
+<div class="card mod"><div class="ib"><svg class="i"><use href="#cu"/></svg></div><small>MÓDULO 01</small><h3>Mecânica &amp; CAD Onshape</h3><p>Desenho 3D paramétrico no Onshape, dimensionamento de transmissões (goBILDA / REV), chassi de odometria, mecanismos de elevação e tolerâncias para manufatura aditiva 3D.</p><div class="tg"><i>Onshape</i><i>goBILDA</i><i>3D Print</i></div><a class="lk" href="#entrar">Acessar Trilha Mecânica <svg class="i"><use href="#ch"/></svg></a></div>
+<div class="card mod"><div class="ib"><svg class="i"><use href="#tm"/></svg></div><small>MÓDULO 02</small><h3>Programação &amp; Autônomo</h3><p>Java orientado a objetos, arquitetura de máquinas de estado (FSM), controle PID de motores, odometria com Road Runner / Pedro Pathing e visão com AprilTags.</p><div class="tg"><i>Road Runner</i><i>AprilTags</i><i>FTCLib</i></div><a class="lk" href="#entrar">Acessar Trilha de Código <svg class="i"><use href="#ch"/></svg></a></div>
+<div class="card mod"><div class="ib"><svg class="i"><use href="#pn"/></svg></div><small>MÓDULO 03</small><h3>Escrita do Engineering Portfolio</h3><p>O segredo dos prêmios de juízes. Como sintetizar a temporada em 15 páginas impactantes: ciclo de iterações de engenharia, matrizes de decisão e storytelling visual.</p><div class="tg"><i>15 Páginas</i><i>Inspire Award</i><i>Modelos</i></div><a class="lk" href="#entrar">Acessar Modelos de Portfólio <svg class="i"><use href="#ch"/></svg></a></div>
+<div class="card mod"><div class="ib"><svg class="i"><use href="#us"/></svg></div><small>MÓDULO 04</small><h3>Estratégia &amp; Outreach</h3><p>Simulação de pontuação de arena, plano de negócios, captação de patrocínio com empresas de tecnologia, oratória para sala de juízes e conexão STEM com a comunidade.</p><div class="tg"><i>Scouting</i><i>Sponsors</i><i>Juízes Q&amp;A</i></div><a class="lk" href="#entrar">Explorar Estratégia <svg class="i"><use href="#ch"/></svg></a></div>
 </div>
 </div></section>
-<!-- ======================================================== -->
-<!-- TELEMETRY & IMPACT STATS BANNER                          -->
-<!-- ======================================================== -->
-<section class="w-full max-w-7xl mx-auto px-6 py-6">
-<div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-<div class="bg-surface-container rounded-xl p-6 shadow-md flex flex-col gap-2 relative overflow-hidden group hover:bg-surface-container-high transition-all">
-<div class="flex items-center justify-between text-on-surface-variant">
-<span class="font-label-caps text-label-caps tracking-wider text-primary">MENTORIA DIRETA</span>
-<span class="material-symbols-outlined text-primary text-[20px]">schedule</span>
-</div>
-<div class="flex items-baseline gap-1">
-<span class="font-headline-lg text-headline-lg font-bold text-on-surface">X+</span>
-<span class="font-label-code text-label-code text-primary">HRS</span>
-</div>
-<p class="font-body-sm text-body-sm text-on-surface-variant">De chamadas técnicas ao vivo e acompanhamento.</p>
-</div>
-<div class="bg-surface-container rounded-xl p-6 shadow-md flex flex-col gap-2 relative overflow-hidden group hover:bg-surface-container-high transition-all">
-<div class="flex items-center justify-between text-on-surface-variant">
-<span class="font-label-caps text-label-caps tracking-wider text-tertiary">Pessoas Alcançadas</span>
-<span class="material-symbols-outlined text-tertiary text-[20px]">groups</span>
-</div>
-<div class="flex items-baseline gap-1">
-<span class="font-headline-lg text-headline-lg font-bold text-on-surface">X+</span>
-<span class="font-label-code text-label-code text-tertiary">Pessoas</span>
-</div>
-<p class="font-body-sm text-body-sm text-on-surface-variant">Apoiados em CAD, código e preparação para processo seletivo.</p>
-</div>
-<div class="bg-surface-container rounded-xl p-6 shadow-md flex flex-col gap-2 relative overflow-hidden group hover:bg-surface-container-high transition-all">
-<div class="flex items-center justify-between text-on-surface-variant">
-<span class="font-label-caps text-label-caps tracking-wider text-secondary">RECURSOS ABERTOS</span>
-<span class="material-symbols-outlined text-secondary text-[20px]">library_books</span>
-</div>
-<div class="flex items-baseline gap-1">
-<span class="font-headline-lg text-headline-lg font-bold text-on-surface">X+</span>
-<span class="font-label-code text-label-code text-secondary">DOCS</span>
-</div>
-<p class="font-body-sm text-body-sm text-on-surface-variant">Modelos Onshape, bibliotecas Java e checklists.</p>
-</div>
-<div class="bg-surface-container rounded-xl p-6 shadow-md flex flex-col gap-2 relative overflow-hidden group hover:bg-surface-container-high transition-all">
-<div class="flex items-center justify-between text-on-surface-variant">
-<span class="font-label-caps text-label-caps tracking-wider text-primary">GRACIOUS PROFESSIONALISM</span>
-<span class="material-symbols-outlined text-primary text-[20px]">volunteer_activism</span>
-</div>
-<div class="flex items-baseline gap-1">
-<span class="font-headline-lg text-headline-lg font-bold text-on-surface">100%</span>
-<span class="font-label-code text-label-code text-primary">FREE</span>
-</div>
-<p class="font-body-sm text-body-sm text-on-surface-variant">Iniciativa voluntária sem custos para equipes escolares.</p>
-</div>
-</div>
-</section>
-<!-- ======================================================== -->
-<!-- TRILHAS DE MENTORIA: Core Pillars Grid                   -->
-<!-- ======================================================== -->
-<section class="w-full max-w-7xl mx-auto px-6 py-20 flex flex-col gap-12">
-<div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
-<div class="flex flex-col gap-3 max-w-2xl">
-<div class="flex items-center gap-2">
-<span class="font-label-code text-label-code uppercase tracking-wider text-primary px-2 py-0.5 rounded bg-surface-container">
-            PILHARES DE FORMAÇÃO
-          </span>
-</div>
-<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold">
-          Trilhas Técnicas Especializadas
-        </h2>
-<p class="font-body-lg text-body-lg text-on-surface-variant">
-          Material didático detalhado, diagramas e sessões práticas divididas nas quatro grandes áreas de excelência do FIRST Tech Challenge.
-        </p>
-</div>
-<a class="inline-flex items-center gap-2 text-primary font-headline-sm text-body-md font-semibold hover:text-primary-fixed transition-colors" data-path="trilhas" href="#">
-<span class="">Ver grade completa de módulos</span>
-<span class="material-symbols-outlined text-sm">arrow_forward</span>
-</a>
-</div>
-<!-- 4-Track Card Grid -->
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-<!-- Track 1: Mecânica e CAD -->
-<div class="bg-surface-container rounded-2xl p-6 shadow-lg flex flex-col justify-between hover:bg-surface-container-high hover:-translate-y-1 transition-all duration-300">
-<div class="flex flex-col gap-4">
-<div class="w-12 h-12 rounded-xl bg-primary-container/20 text-primary flex items-center justify-center">
-<span class="material-symbols-outlined text-[28px]">view_in_ar</span>
-</div>
-<div>
-<span class="font-label-code text-label-code text-on-surface-variant uppercase">MÓDULO 01</span>
-<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold mt-1">
-              Mecânica &amp; CAD Onshape
-            </h3>
-</div>
-<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
-            Desenho 3D paramétrico no Onshape, dimensionamento de transmissões (goBILDA / REV), chassis de odometria, mecanismos de elevação e tolerâncias para manufatura aditiva 3D.
-          </p>
-<div class="flex flex-wrap gap-1.5 pt-2">
-<span class="px-2 py-0.5 rounded bg-surface-container-lowest font-label-code text-[11px] text-on-surface-variant">Onshape</span>
-<span class="px-2 py-0.5 rounded bg-surface-container-lowest font-label-code text-[11px] text-on-surface-variant">goBILDA</span>
-<span class="px-2 py-0.5 rounded bg-surface-container-lowest font-label-code text-[11px] text-on-surface-variant">3D Print</span>
-</div>
-</div>
-<div class="pt-6 mt-4">
-<a class="inline-flex items-center gap-1.5 text-primary font-body-sm text-body-sm font-semibold hover:underline" data-path="robo-e-engenharia" href="#">
-<span class="">Acessar Trilha Mecânica</span>
-<span class="material-symbols-outlined text-[16px]">chevron_right</span>
-</a>
-</div>
-</div>
-<!-- Track 2: Programação & Autônomo -->
-<div class="bg-surface-container rounded-2xl p-6 shadow-lg flex flex-col justify-between hover:bg-surface-container-high hover:-translate-y-1 transition-all duration-300">
-<div class="flex flex-col gap-4">
-<div class="w-12 h-12 rounded-xl bg-tertiary-container/20 text-tertiary flex items-center justify-center">
-<span class="material-symbols-outlined text-[28px]">terminal</span>
-</div>
-<div>
-<span class="font-label-code text-label-code text-on-surface-variant uppercase">MÓDULO 02</span>
-<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold mt-1">
-              Programação &amp; Autônomo
-            </h3>
-</div>
-<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
-            Java orientado a objetos para FTC, arquitetura de máquinas de estado (FSM), controle PID de motores, odometria com Road Runner / Pedro Pathing e visão com AprilTags.
-          </p>
-<div class="flex flex-wrap gap-1.5 pt-2">
-<span class="px-2 py-0.5 rounded bg-surface-container-lowest font-label-code text-[11px] text-on-surface-variant">Road Runner</span>
-<span class="px-2 py-0.5 rounded bg-surface-container-lowest font-label-code text-[11px] text-on-surface-variant">AprilTags</span>
-<span class="px-2 py-0.5 rounded bg-surface-container-lowest font-label-code text-[11px] text-on-surface-variant">FTCLib</span>
-</div>
-</div>
-<div class="pt-6 mt-4">
-<a class="inline-flex items-center gap-1.5 text-tertiary font-body-sm text-body-sm font-semibold hover:underline" data-path="programacao-e-autonomo" href="#">
-<span class="">Acessar Trilha de Código</span>
-<span class="material-symbols-outlined text-[16px]">chevron_right</span>
-</a>
-</div>
-</div>
-<!-- Track 3: Engineering Portfolio -->
-<div class="bg-surface-container rounded-2xl p-6 shadow-lg flex flex-col justify-between hover:bg-surface-container-high hover:-translate-y-1 transition-all duration-300">
-<div class="flex flex-col gap-4">
-<div class="w-12 h-12 rounded-xl bg-secondary-container/20 text-secondary flex items-center justify-center">
-<span class="material-symbols-outlined text-[28px]">history_edu</span>
-</div>
-<div>
-<span class="font-label-code text-label-code text-on-surface-variant uppercase">MÓDULO 03</span>
-<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold mt-1">Escrita do Engineering Portfolio
-            </h3>
-</div>
-<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
-            O segredo dos prêmios de juízes. Como sintetizar a temporada em 15 páginas impactantes: ciclo de iterações de engenharia, matrizes de decisão e storytelling visual.
-          </p>
-<div class="flex flex-wrap gap-1.5 pt-2">
-<span class="px-2 py-0.5 rounded bg-surface-container-lowest font-label-code text-[11px] text-on-surface-variant">15 Páginas</span>
-<span class="px-2 py-0.5 rounded bg-surface-container-lowest font-label-code text-[11px] text-on-surface-variant">Inspire Award</span>
-<span class="px-2 py-0.5 rounded bg-surface-container-lowest font-label-code text-[11px] text-on-surface-variant">Modelos</span>
-</div>
-</div>
-<div class="pt-6 mt-4">
-<a class="inline-flex items-center gap-1.5 text-secondary font-body-sm text-body-sm font-semibold hover:underline" data-path="caderno-de-engenharia" href="#">
-<span class="">Acessar Modelos de Portfólio</span>
-<span class="material-symbols-outlined text-[16px]">chevron_right</span>
-</a>
-</div>
-</div>
-<!-- Track 4: Estratégia e Negócios -->
-<div class="bg-surface-container rounded-2xl p-6 shadow-lg flex flex-col justify-between hover:bg-surface-container-high hover:-translate-y-1 transition-all duration-300">
-<div class="flex flex-col gap-4">
-<div class="w-12 h-12 rounded-xl bg-surface-variant text-on-surface flex items-center justify-center">
-<span class="material-symbols-outlined text-[28px]">strategy</span>
-</div>
-<div>
-<span class="font-label-code text-label-code text-on-surface-variant uppercase">MÓDULO 04</span>
-<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold mt-1">
-              Estratégia &amp; Outreach
-            </h3>
-</div>
-<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
-            Simulação de pontuação de arena, plano de negócios, captação de patrocínio com empresas de tecnologia, oratória para sala de juízes e conexão STEM na comunidade.
-          </p>
-<div class="flex flex-wrap gap-1.5 pt-2">
-<span class="px-2 py-0.5 rounded bg-surface-container-lowest font-label-code text-[11px] text-on-surface-variant">Scouting</span>
-<span class="px-2 py-0.5 rounded bg-surface-container-lowest font-label-code text-[11px] text-on-surface-variant">Sponsors</span>
-<span class="px-2 py-0.5 rounded bg-surface-container-lowest font-label-code text-[11px] text-on-surface-variant">Juízes Q&amp;A</span>
-</div>
-</div>
-<div class="pt-6 mt-4">
-<a class="inline-flex items-center gap-1.5 text-on-surface font-body-sm text-body-sm font-semibold hover:underline" data-path="mentorias-1-on-1" href="#">
-<span class="">Explorar Estratégia</span>
-<span class="material-symbols-outlined text-[16px]">chevron_right</span>
-</a>
-</div>
-</div>
-</div>
-</section>
-<!-- ======================================================== -->
-<!-- CODE & SIMULATION CALLOUT (HIGH-TECH LAB PREVIEW)        -->
-<!-- ======================================================== -->
-<section class="relative w-full max-w-7xl mx-auto px-6 py-20 overflow-hidden"><!-- Subtle Ambient Cosmic Glows -->
-<div class="absolute -top-32 -left-24 w-96 h-96 bg-primary/20 rounded-full blur-[100px] pointer-events-none"></div>
-<div class="absolute -bottom-24 -right-24 w-96 h-96 bg-secondary-container/20 rounded-full blur-[100px] pointer-events-none"></div>
 
-<div class="relative z-10 flex flex-col gap-12 max-w-7xl mx-auto w-full">
-  <!-- Section Header matching Trilhas Técnicas -->
-  <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
-    <div class="flex flex-col gap-3 max-w-3xl">
-      <div class="flex items-center gap-2">
-        <span class="font-label-code text-label-code uppercase tracking-wider text-primary px-2.5 py-1 rounded bg-surface-container border border-primary/20">
-          // RECRUTAMENTO // EQUIPE #17731
-        </span>
-      </div>
-      <h2 class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight">
-        Faça parte da equipe Legonautas Robotics
-      </h2>
-      <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
-        Não precisa ter experiência prévia. Desenvolvemos seu potencial técnico do zero até a arena mundial através do nosso programa imersivo de mentoria e onboarding de novos membros.
-      </p>
-    </div>
-    <div class="flex items-center gap-3 shrink-0 font-label-code text-xs text-on-surface-variant">
-      <span class="px-3 py-1.5 rounded-lg bg-surface-container border border-outline-variant/30 text-tertiary flex items-center gap-1.5 shadow-sm">
-        <span class="material-symbols-outlined text-[16px]">school</span> 100% Gratuito
-      </span>
-      <span class="px-3 py-1.5 rounded-lg bg-surface-container border border-outline-variant/30 text-primary flex items-center gap-1.5 shadow-sm">
-        <span class="material-symbols-outlined text-[16px]">verified</span> Sem Pré-requisitos
-      </span>
-    </div>
-  </div>
-
-  <!-- 3 Sleek Cards Grid matching Trilhas Técnicas Architecture -->
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-    <!-- Card 1: Fase 01 -->
-    <div class="bg-surface-container rounded-2xl p-7 shadow-lg flex flex-col justify-between hover:bg-surface-container-high hover:-translate-y-1 transition-all duration-300 border border-outline-variant/20 hover:border-primary/40 group">
-      <div class="flex flex-col gap-4">
-        <div class="flex items-center justify-between">
-          <div class="w-12 h-12 rounded-xl bg-primary-container/20 border border-primary/30 text-primary flex items-center justify-center shadow-[0_0_16px_rgba(160,120,255,0.35)]">
-            <span class="material-symbols-outlined text-[26px]">explore</span>
-          </div>
-          <span class="font-label-code text-label-code text-primary uppercase px-2.5 py-1 rounded bg-primary/10 border border-primary/20 tracking-wider font-semibold">
-            FASE 01
-          </span>
-        </div>
-        <div>
-          <span class="font-label-code text-label-code text-on-surface-variant uppercase tracking-wider">ONBOARDING</span>
-          <h3 class="font-headline-sm text-headline-sm text-on-surface font-bold mt-1">
-            Imersão &amp; Fundamentos FTC
-          </h3>
-        </div>
-        <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
-          Introdução à dinâmica da FIRST, mecânica de arena, cultura de Gracious Professionalism e primeiros passos com ferramentas de fábrica digital.
-        </p>
-        <ul class="flex flex-col gap-2.5 pt-3 border-t border-outline-variant/20 font-body-sm text-on-surface-variant">
-          <li class="flex items-center gap-2">
-            <span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
-            <span class=""><strong class="text-on-surface font-medium">Nivelamento prático:</strong> oficina e metodologias</span>
-          </li>
-          <li class="flex items-center gap-2">
-            <span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
-            <span class=""><strong class="text-on-surface font-medium">Segurança:</strong> ferramental e montagens</span>
-          </li>
-        </ul>
-        <div class="flex flex-wrap gap-1.5 pt-2">
-          <span class="px-2.5 py-0.5 rounded bg-surface-container-lowest font-label-code text-[11px] text-on-surface-variant">Cultura FIRST</span>
-          <span class="px-2.5 py-0.5 rounded bg-surface-container-lowest font-label-code text-[11px] text-on-surface-variant">Oficina Básica</span>
-          <span class="px-2.5 py-0.5 rounded bg-surface-container-lowest font-label-code text-[11px] text-on-surface-variant">Mentoria Guiada</span>
-        </div>
-      </div>
-      <div class="pt-6 mt-4 border-t border-outline-variant/15">
-        <div class="flex items-center gap-1.5 text-primary font-body-sm font-semibold group-hover:underline">
-          <span class="">Etapa Inicial Aberta</span>
-          <span class="material-symbols-outlined text-[16px]">chevron_right</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Card 2: Fase 02 (Especialização) -->
-    <div class="bg-surface-container rounded-2xl p-7 shadow-lg flex flex-col justify-between hover:bg-surface-container-high hover:-translate-y-1 transition-all duration-300 border-2 border-primary/30 hover:border-primary group relative">
-      <div class="flex flex-col gap-4">
-        <div class="flex items-center justify-between">
-          <div class="w-12 h-12 rounded-xl bg-secondary-container/20 border border-secondary/30 text-secondary flex items-center justify-center shadow-[0_0_16px_rgba(160,120,255,0.35)]">
-            <span class="material-symbols-outlined text-[26px]">psychology</span>
-          </div>
-          <span class="font-label-code text-label-code text-secondary uppercase px-2.5 py-1 rounded bg-secondary-container/30 border border-secondary/40 tracking-wider font-semibold">
-            FASE 02 • ESPECIALIZAÇÃO
-          </span>
-        </div>
-        <div>
-          <span class="font-label-code text-label-code text-secondary uppercase tracking-wider">TRILHAS TÉCNICAS</span>
-          <h3 class="font-headline-sm text-headline-sm text-on-surface font-bold mt-1">
-            Trilha por Áreas de Foco
-          </h3>
-        </div>
-        <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
-          Você escolhe e se aprofunda na área que mais ama, mentorado diretamente pelos veteranos premiados da 17731:
-        </p>
-        <div class="flex flex-col gap-2.5 pt-3 border-t border-outline-variant/20 font-body-sm text-on-surface-variant">
-          <div class="flex items-start gap-2">
-            <span class="material-symbols-outlined text-tertiary text-[18px] mt-0.5">precision_manufacturing</span>
-            <span class=""><strong class="text-on-surface font-medium">Mecânica &amp; CAD:</strong> Onshape, goBILDA e 3D</span>
-          </div>
-          <div class="flex items-start gap-2">
-            <span class="material-symbols-outlined text-primary text-[18px] mt-0.5">terminal</span>
-            <span class=""><strong class="text-on-surface font-medium">Programação:</strong> Java, Pedro Pathing &amp; Vision</span>
-          </div>
-          <div class="flex items-start gap-2">
-            <span class="material-symbols-outlined text-secondary text-[18px] mt-0.5">history_edu</span>
-            <span class=""><strong class="text-on-surface font-medium">Portfólio &amp; Gestão:</strong> Design e apresentação</span>
-          </div>
-        </div>
-        <div class="flex flex-wrap gap-1.5 pt-2">
-          <span class="px-2.5 py-0.5 rounded bg-surface-container-lowest font-label-code text-[11px] text-on-surface-variant">Mecânica &amp; CAD</span>
-          <span class="px-2.5 py-0.5 rounded bg-surface-container-lowest font-label-code text-[11px] text-on-surface-variant">Java FTC</span>
-          <span class="px-2.5 py-0.5 rounded bg-surface-container-lowest font-label-code text-[11px] text-on-surface-variant">Portfolio</span>
-        </div>
-      </div>
-      <div class="pt-6 mt-4 border-t border-outline-variant/15">
-        <div class="flex items-center gap-1.5 text-secondary font-body-sm font-semibold group-hover:underline">
-          <span class="">Aprofundamento Prático</span>
-          <span class="material-symbols-outlined text-[16px]">chevron_right</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Card 3: Fase 03 -->
-    <div class="bg-surface-container rounded-2xl p-7 shadow-lg flex flex-col justify-between hover:bg-surface-container-high hover:-translate-y-1 transition-all duration-300 border border-outline-variant/20 hover:border-tertiary/40 group">
-      <div class="flex flex-col gap-4">
-        <div class="flex items-center justify-between">
-          <div class="w-12 h-12 rounded-xl bg-tertiary-container/20 border border-tertiary/30 text-tertiary flex items-center justify-center shadow-[0_0_16px_rgba(123,208,255,0.3)]">
-            <span class="material-symbols-outlined text-[26px]">sports_score</span>
-          </div>
-          <span class="font-label-code text-label-code text-tertiary uppercase px-2.5 py-1 rounded bg-tertiary/10 border border-tertiary/20 tracking-wider font-semibold">
-            FASE 03
-          </span>
-        </div>
-        <div>
-          <span class="font-label-code text-label-code text-on-surface-variant uppercase tracking-wider">COMPETIÇÃO</span>
-          <h3 class="font-headline-sm text-headline-sm text-on-surface font-bold mt-1">
-            Arena, Testes &amp; Competição
-          </h3>
-        </div>
-        <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
-          Participação ativa na construção do robô oficial da temporada, simulações de partidas reais na arena e entrevistas técnicas com juízes.
-        </p>
-        <ul class="flex flex-col gap-2.5 pt-3 border-t border-outline-variant/20 font-body-sm text-on-surface-variant">
-          <li class="flex items-center gap-2">
-            <span class="material-symbols-outlined text-tertiary text-[18px]">check_circle</span>
-            <span class=""><strong class="text-on-surface font-medium">Drive Team:</strong> Piloto, copiloto e técnicos</span>
-          </li>
-          <li class="flex items-center gap-2">
-            <span class="material-symbols-outlined text-tertiary text-[18px]">check_circle</span>
-            <span class=""><strong class="text-on-surface font-medium">Torneios:</strong> Regionais, nacionais e mundiais</span>
-          </li>
-        </ul>
-        <div class="flex flex-wrap gap-1.5 pt-2">
-          <span class="px-2.5 py-0.5 rounded bg-surface-container-lowest font-label-code text-[11px] text-on-surface-variant">Simulação Real</span>
-          <span class="px-2.5 py-0.5 rounded bg-surface-container-lowest font-label-code text-[11px] text-on-surface-variant">Drive Team</span>
-          <span class="px-2.5 py-0.5 rounded bg-surface-container-lowest font-label-code text-[11px] text-on-surface-variant">Juízes Q&amp;A</span>
-        </div>
-      </div>
-      <div class="pt-6 mt-4 border-t border-outline-variant/15">
-        <div class="flex items-center gap-1.5 text-tertiary font-body-sm font-semibold group-hover:underline">
-          <span class="">Experiência de Pista</span>
-          <span class="material-symbols-outlined text-[16px]">chevron_right</span>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Bottom Integrated Recruitment Banner -->
-  <div class="bg-surface-container rounded-2xl p-6 sm:p-8 border border-outline-variant/20 flex flex-col md:flex-row items-center justify-between gap-6 shadow-lg">
-    <div class="flex flex-col gap-1.5 text-center md:text-left">
-      <div class="flex items-center justify-center md:justify-start gap-2">
-        <span class="material-symbols-outlined text-primary text-[22px]">stars</span>
-        <h4 class="font-headline-sm text-headline-sm text-on-surface font-bold">Pronto para construir o futuro da robótica com a gente?</h4>
-      </div>
-      <p class="font-body-sm text-body-sm text-on-surface-variant">Vagas abertas para a temporada atual. Inscrições abertas para estudantes da rede com os Legonautas.</p>
-    </div>
-    <div class="flex flex-wrap items-center justify-center gap-4 shrink-0">
-      <a class="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-xl bg-gradient-to-r from-secondary-container via-primary-container to-secondary text-on-primary font-headline-sm text-body-sm font-bold shadow-[0_0_24px_rgba(160,120,255,0.45)] hover:shadow-[0_0_32px_rgba(208,188,255,0.65)] hover:scale-105 transition-all" data-path="mentorias-1-on-1" href="#">
-        <span class="">Quero Fazer Parte da Equipe</span>
-        <span class="material-symbols-outlined text-[18px]">rocket_launch</span>
-      </a>
-      <a class="inline-flex items-center gap-2 px-5 py-3.5 rounded-xl bg-surface-container-high text-on-surface hover:text-primary hover:bg-surface-variant transition-all font-body-sm font-semibold border border-outline-variant/20 hover:border-primary/30" data-path="trilhas" href="#">
-        <span class="material-symbols-outlined text-[18px]">info</span>
-        <span class="">Ver Etapas da Seleção</span>
-      </a>
-    </div>
-  </div>
+<section id="recrutamento"><div class="w">
+<div class="hd"><div><span class="pill">// Recrutamento // Equipe #17731</span><h2>Faça parte da equipe Legonautas Robotics</h2><p>Não precisa ter experiência prévia. Desenvolvemos seu potencial técnico do zero até a arena mundial através do nosso programa imersivo de mentoria e onboarding de novos membros.</p></div><div class="bd"><span><svg class="i"><use href="#gc"/></svg>100% Gratuito</span><span><svg class="i"><use href="#sh"/></svg>Sem Pré-requisitos</span></div></div>
+<div class="g3">
+<div class="card ph"><span class="n">FASE 01</span><div class="ib"><svg class="i"><use href="#cp"/></svg></div><small>ONBOARDING</small><h3>Imersão &amp; Fundamentos FTC</h3><p>Introdução à dinâmica da FIRST, mecânica de arena, cultura de Gracious Professionalism e primeiros passos com ferramentas de fábrica digital.</p><ul><li><svg class="i"><use href="#ci"/></svg><span><b>Nivelamento prático:</b> oficina e metodologias</span></li><li><svg class="i"><use href="#ci"/></svg><span><b>Segurança:</b> ferramental e montagens</span></li></ul><div class="tg"><i>Cultura FIRST</i><i>Oficina Básica</i><i>Mentoria Guiada</i></div><a class="lk" href="#entrar">Etapa Inicial Aberta <svg class="i"><use href="#ch"/></svg></a></div>
+<div class="card ph hi"><span class="n">FASE 02 + ESPECIALIZAÇÃO</span><div class="ib"><svg class="i"><use href="#cu"/></svg></div><small>TRILHAS TÉCNICAS</small><h3>Trilha por Áreas de Foco</h3><p>Você escolhe e se aprofunda na área que mais ama, mentorado diretamente pelos veteranos premiados da 17731:</p><ul><li><svg class="i"><use href="#cu"/></svg><span><b>Mecânica &amp; CAD:</b> Onshape, goBILDA e 3D</span></li><li><svg class="i"><use href="#tm"/></svg><span><b>Programação:</b> Java, Pedro Pathing &amp; Vision</span></li><li><svg class="i"><use href="#pn"/></svg><span><b>Portfólio &amp; Gestão:</b> Design e apresentação</span></li></ul><div class="tg"><i>Mecânica &amp; CAD</i><i>Java FTC</i><i>Portfólio</i></div><a class="lk" href="#entrar">Aprofundamento Prático <svg class="i"><use href="#ch"/></svg></a></div>
+<div class="card ph"><span class="n">FASE 03</span><div class="ib"><svg class="i"><use href="#fl"/></svg></div><small>COMPETIÇÃO</small><h3>Arena, Testes &amp; Competição</h3><p>Participação ativa na construção do robô oficial da temporada, simulações de partidas reais na arena e entrevistas técnicas com juízes.</p><ul><li><svg class="i"><use href="#ci"/></svg><span><b>Drive Team:</b> Piloto, copiloto e técnicos</span></li><li><svg class="i"><use href="#ci"/></svg><span><b>Torneios:</b> Regionais, nacionais e mundiais</span></li></ul><div class="tg"><i>Simulação Real</i><i>Drive Team</i><i>Juízes Q&amp;A</i></div><a class="lk" href="#entrar">Experiência de Pista <svg class="i"><use href="#ch"/></svg></a></div>
+</div>
+<div class="card cta" id="entrar"><div class="ib"><svg class="i"><use href="#rk"/></svg></div><div class="tx"><h3>Pronto para construir o futuro da robótica com a gente?</h3><p>Vagas abertas para a temporada atual. Inscrições abertas para estudantes da rede com os Legonautas.</p></div><a class="btn pri" href="#entrar">Quero Fazer Parte da Equipe <svg class="i"><use href="#rk"/></svg></a><a class="btn" href="#recrutamento"><svg class="i"><use href="#sh"/></svg> Ver Etapas da Seleção</a></div>
 </div></section>
-<!-- COMO FUNCIONA A MENTORIA: Step-by-Step Flow             -->
-<!-- ======================================================== -->
-<!-- ======================================================== -->
-<section class="w-full max-w-7xl mx-auto px-6 py-20 flex flex-col gap-12">
-<div class="flex flex-col items-center text-center max-w-2xl mx-auto">
-<span class="font-label-code text-label-code uppercase tracking-wider text-primary px-2.5 py-0.5 rounded-full bg-surface-container mb-3">
-        FLUXO DE ACOMPANHAMENTO
-      </span>
-<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold">
-        Como funciona a mentoria 1-on-1?
-      </h2>
-<p class="font-body-lg text-body-lg text-on-surface-variant mt-2">
-        Um processo estruturado de apoio contínuo para garantir que sua integração na equipe seja melhor aproveitada.</p>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
-<!-- Step 1 -->
-<div class="bg-surface-container rounded-2xl p-8 shadow-md flex flex-col gap-4 relative">
-<div class="flex items-center justify-between">
-<span class="w-12 h-12 rounded-xl bg-surface-container-low text-primary font-display-hero text-headline-sm font-extrabold flex items-center justify-center">
-            01
-          </span>
-<span class="font-label-caps text-label-caps text-on-surface-variant">FASE INICIAL</span>
-</div>
-<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">
-          Diagnóstico &amp; Objetivos
-        </h3>
-<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
-          Analisamos os recursos da sua equipe: peças disponíveis (REV, goBILDA, Tetrix), nível de programação em Java/Blocks e prazos do torneio regional.
-        </p>
-<ul class="flex flex-col gap-2 font-body-sm text-body-sm text-on-surface-variant pt-2">
-<li class="flex items-center gap-2">
-<span class="material-symbols-outlined text-primary text-[18px]">check</span>
-<span class="">Checklist de inspeção mecânica</span>
-</li>
-<li class="flex items-center gap-2">
-<span class="material-symbols-outlined text-primary text-[18px]">check</span>
-<span class="">Mapeamento de pontos fortes</span>
-</li>
-</ul>
-</div>
-<!-- Step 2 -->
-<div class="bg-surface-container rounded-2xl p-8 shadow-md flex flex-col gap-4 relative">
-<div class="flex items-center justify-between">
-<span class="w-12 h-12 rounded-xl bg-surface-container-low text-tertiary font-display-hero text-headline-sm font-extrabold flex items-center justify-center">
-            02
-          </span>
-<span class="font-label-caps text-label-caps text-on-surface-variant">IMERSÃO PRÁTICA</span>
-</div>
-<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">
-          Sessões Técnicas ao Vivo
-        </h3>
-<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
-          Chamadas no Discord ou Google Meet com compartilhamento de tela. Revisamos seu código no Android Studio, tiramos dúvidas de montagem e fazemos feedback do portfólio.
-        </p>
-<ul class="flex flex-col gap-2 font-body-sm text-body-sm text-on-surface-variant pt-2">
-<li class="flex items-center gap-2">
-<span class="material-symbols-outlined text-tertiary text-[18px]">check</span>
-<span class="">Code review &amp; depuração de erros</span>
-</li>
-<li class="flex items-center gap-2">
-<span class="material-symbols-outlined text-tertiary text-[18px]">check</span>
-<span class="">Mock interview para sala de juízes</span>
-</li>
-</ul>
-</div>
-<!-- Step 3 -->
-<div class="bg-surface-container rounded-2xl p-8 shadow-md flex flex-col gap-4 relative">
-<div class="flex items-center justify-between">
-<span class="w-12 h-12 rounded-xl bg-surface-container-low text-secondary font-display-hero text-headline-sm font-extrabold flex items-center justify-center">
-            03
-          </span>
-<span class="font-label-caps text-label-caps text-on-surface-variant">ARENA &amp; TORNEIO</span>
-</div>
-<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">
-          Simulação &amp; Estratégia
-        </h3>
-<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
-          Treinamento de pilotos e copilotos, elaboração de rotas autônomas consistentes e plano de aliança para os playoffs do torneio regional.
-        </p>
-<ul class="flex flex-col gap-2 font-body-sm text-body-sm text-on-surface-variant pt-2">
-<li class="flex items-center gap-2">
-<span class="material-symbols-outlined text-secondary text-[18px]">check</span>
-<span class="">Planilhas de Scouting pré-partida</span>
-</li>
-<li class="flex items-center gap-2">
-<span class="material-symbols-outlined text-secondary text-[18px]">check</span>
-<span class="">Checklist rápido de pit stops</span>
-</li>
-</ul>
-</div>
-</div>
-</section>
-<!-- COMMUNITY VOICES / TESTIMONIALS                          -->
-<!-- ======================================================== -->
-<!-- ======================================================== -->
-<section class="w-full max-w-7xl mx-auto px-6 py-12">
-<div class="rounded-2xl bg-surface-container p-8 sm:p-12 shadow-lg flex flex-col gap-8">
-<div class="flex flex-col gap-2">
-<span class="font-label-code text-label-code uppercase tracking-wider text-primary">IMPACTO COMPARTILHADO</span>
-<h3 class="font-headline-lg text-headline-lg text-on-surface font-bold">
-          O que dizem os membros da equipe&nbsp; Legonautas
-        </h3>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-<!-- Testimonial 1 -->
-<div class="bg-surface-container-low rounded-xl p-6 flex flex-col justify-between gap-4">
-<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed italic">
-            "A mentoria do PedroPathing foi um divisor de águas. Estávamos com dificuldade enorme em calibrar a odometria de 3 rodas e em apenas duas sessões conseguimos traçar rotas consistentes que nos renderam o troféu de inovação no regional."
-          </p>
-<div class="flex items-center gap-3 pt-2">
-<div class="w-10 h-10 rounded-full bg-primary-container text-on-primary-container font-headline-sm text-headline-sm font-bold flex items-center justify-center">
-              V
-            </div>
-<div>
-<p class="font-headline-sm text-body-md font-bold text-on-surface">Vinícius</p>
-<p class="font-body-sm text-body-sm text-on-surface-variant">Programador — Legonautas</p>
-</div>
-</div>
-</div>
-<!-- Testimonial 2 -->
-<div class="bg-surface-container-low rounded-xl p-6 flex flex-col justify-between gap-4">
-<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed italic">
-            "Revisar nosso Engineering Portfolio com os veteranos da 17731 abriu nossos olhos para como os juízes realmente avaliam as iterações de design. A clareza das matrizes de decisão mudou nossa pontuação completamente."
-          </p>
-<div class="flex items-center gap-3 pt-2">
-<div class="w-10 h-10 rounded-full bg-secondary-container text-on-secondary font-headline-sm text-headline-sm font-bold flex items-center justify-center">
-              M
-            </div>
-<div>
-<p class="font-headline-sm text-body-md font-bold text-on-surface">Maria Isabel&nbsp;</p>
-<p class="font-body-sm text-body-sm text-on-surface-variant">Gestora — Legonautas</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- GRAND FINALE CTA BANNER: Launch Your Mission             -->
-<!-- ======================================================== -->
-<!-- ======================================================== -->
-<section class="w-full max-w-7xl mx-auto px-6 py-20">
-<div class="relative rounded-3xl bg-gradient-to-br from-surface-container-high via-surface-container to-surface-container-lowest p-8 sm:p-16 shadow-2xl overflow-hidden flex flex-col items-center text-center">
-<!-- Ambient Purple Energy Glows -->
-<div class="absolute -top-32 left-1/2 -translate-x-1/2 w-96 h-96 bg-primary/25 rounded-full blur-[100px] pointer-events-none"></div>
-<div class="relative z-10 flex flex-col items-center gap-6 max-w-2xl">
-<div class="flex items-center gap-2">
-<span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
-<span class="font-label-code text-label-code tracking-widest text-primary uppercase">
-            MISSÃO FTC 2026 / 2027</span>
-</div>
-<h2 class="font-display-hero text-headline-lg sm:text-[3.25rem] font-extrabold text-on-surface leading-tight">Participe da equipe e leve ela para o próximo patamar.</h2>
-<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
-          Seja você uma equipe estreante buscando construir o primeiro chassi funcional ou um time veterano refinando algoritmos de visão autônoma — estamos prontos para colaborar.
-        </p>
-<div class="flex flex-wrap items-center justify-center gap-4 pt-4">
 
-
+<section class="flow"><div class="w">
+<span class="pill">Fluxo de acompanhamento</span>
+<h2>Como funciona a mentoria 1-on-1?</h2>
+<p>Um processo estruturado de apoio contínuo para garantir que sua integração na equipe seja a melhor aproveitada.</p>
+<div class="g3">
+<div class="card"><div class="t"><b>01</b>FASE INICIAL</div><h3>Diagnóstico &amp; Objetivos</h3><p class="d">Analisamos os recursos da sua equipe: peças disponíveis (REV, goBILDA, Tetrix), nível de programação em Java/Blocks e prazos do torneio regional.</p><ul><li><svg class="i"><use href="#ci"/></svg>Checklist de inspeção mecânica</li><li><svg class="i"><use href="#ci"/></svg>Mapeamento de pontos fortes</li></ul></div>
+<div class="card"><div class="t"><b>02</b>IMERSÃO PRÁTICA</div><h3>Sessões Técnicas ao Vivo</h3><p class="d">Chamadas no Discord ou Google Meet com compartilhamento de tela. Revisamos seu código no Android Studio, tiramos dúvidas de montagem e fazemos feedback do portfólio.</p><ul><li><svg class="i"><use href="#ci"/></svg>Code review &amp; depuração de erros</li><li><svg class="i"><use href="#ci"/></svg>Mock interview para sala de juízes</li></ul></div>
+<div class="card"><div class="t"><b>03</b>ARENA &amp; TORNEIO</div><h3>Simulação &amp; Estratégia</h3><p class="d">Treinamento de pilotos e copilotos, elaboração de rotas autônomas consistentes e plano de aliança para os playoffs do torneio regional.</p><ul><li><svg class="i"><use href="#ci"/></svg>Planilhas de Scouting pré-partida</li><li><svg class="i"><use href="#ci"/></svg>Checklist rápido de pit stops</li></ul></div>
 </div>
+</div></section>
 
-</div>
-</div>
-</section>
-</div></main><footer class="w-full bg-surface-container-lowest border-t border-outline-variant/20 pt-16 pb-12"><div class="max-w-7xl mx-auto px-6 flex flex-col gap-12"><div class="grid grid-cols-1 md:grid-cols-4 gap-8"><div class="flex flex-col gap-4 md:col-span-1"><div class="flex items-center gap-2"><span class="font-headline-sm text-headline-sm text-on-surface font-bold">LEGONAUTAS&nbsp; #17731</span></div><p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">Plataforma aberta de capacitação técnica, mentoria estratégica e documentação aberta para alunos que desejam integrar na FIRST Tech Challenge (FTC).</p><div class="flex items-center gap-2"><span class="px-2.5 py-1 rounded-full bg-surface-container font-label-caps text-label-caps text-tertiary border border-tertiary/20 flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span>FIRST TECH CHALLENGE</span></div></div><div class="flex flex-col gap-3"><span class="font-label-caps text-label-caps text-primary tracking-wider">TRILHAS TÉCNICAS</span><div class="flex flex-col gap-2 font-body-sm text-body-sm text-on-surface-variant"><a class="hover:text-primary transition-colors" data-path="robo-e-engenharia" href="#">Design CAD &amp; Onshape</a><a class="hover:text-primary transition-colors" data-path="robo-e-engenharia" href="#">Mecânica &amp; Transmissões</a><a class="hover:text-primary transition-colors" data-path="programacao-e-autonomo" href="#">Programação em POO</a><a class="hover:text-primary transition-colors" data-path="programacao-e-autonomo" href="#"><br></a></div></div><div class="flex flex-col gap-3"><span class="font-label-caps text-label-caps text-primary tracking-wider">DOCUMENTAÇÃO &amp; IMPACTO</span><div class="flex flex-col gap-2 font-body-sm text-body-sm text-on-surface-variant"><a class="hover:text-primary transition-colors" data-path="caderno-de-engenharia" href="#">Engeneering Portfolio Modelos</a><a class="hover:text-primary transition-colors" data-path="caderno-de-engenharia" href="#">Apresentação para Juízes</a><a class="hover:text-primary transition-colors" data-path="mentorias-1-on-1" href="#">Agendar Sessão Técnica</a><a class="hover:text-primary transition-colors" data-path="comunidade-e-discord" href="#">Servidor Discord Oficial</a></div></div><div class="flex flex-col gap-3"><span class="font-label-caps text-label-caps text-primary tracking-wider">CONECTE-SE</span><p class="font-body-sm text-body-sm text-on-surface-variant">Siga a jornada da equipe 17731 nas competições nacionais e internacionais.</p><div class="flex items-center gap-3"><a aria-label="Canal do YouTube" class="w-10 h-10 rounded-xl bg-surface-container text-on-surface-variant hover:text-primary hover:bg-surface-container-high border border-outline-variant/20 hover:border-primary/30 transition-all flex items-center justify-center shadow-sm" href="#"><span class="material-symbols-outlined text-[20px]">smart_display</span></a><a aria-label="Instagram Oficial" class="w-10 h-10 rounded-xl bg-surface-container text-on-surface-variant hover:text-primary hover:bg-surface-container-high border border-outline-variant/20 hover:border-primary/30 transition-all flex items-center justify-center shadow-sm" href="#"><svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg></a><a aria-label="TikTok Oficial" class="w-10 h-10 rounded-xl bg-surface-container text-on-surface-variant hover:text-primary hover:bg-surface-container-high border border-outline-variant/20 hover:border-primary/30 transition-all flex items-center justify-center shadow-sm" href="#"><svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.29 0 .58.04.86.12V9.4a6.33 6.33 0 0 0-.86-.06A6.34 6.34 0 0 0 3.1 15.68a6.34 6.34 0 0 0 10.83 4.49 6.26 6.26 0 0 0 1.86-4.5V8.58c1.37.98 3.03 1.56 4.8 1.56V6.69h-1z"></path></svg></a></div></div></div><div class="pt-8 border-t border-outline-variant/15 flex flex-col sm:flex-row items-center justify-between gap-4 font-body-sm text-body-sm text-on-surface-variant"><p class="">© 2026 Legonauts #17731. Iniciativa voluntária e aberta de mentoria em robótica FTC.</p><p class="text-xs text-on-surface-variant/80">FIRST®, FIRST® Tech Challenge e FTC® são marcas registradas da For Inspiration and Recognition of Science and Technology.</p></div></div></footer>
+<section><div class="w">
+<div class="card dep"><span class="pill">Impacto compartilhado</span><h2>O que dizem os membros da equipe Legonautas</h2>
+<div class="g3" style="grid-template-columns:1fr 1fr">
+<div class="q">“A mentoria do PedroPathing foi um divisor de águas. Estávamos com dificuldade enorme em calibrar a odometria de 3 rodas e em apenas duas sessões conseguimos traçar rotas consistentes que nos renderam o troféu de inovação no regional.”<div><em>V</em><span><b>Vinícius</b>Programador — Legonautas</span></div></div>
+<div class="q">“Revisar nosso Engineering Portfolio com os veteranos da 17731 abriu nossos olhos para como os juízes realmente avaliam as iterações de design. A clareza das matrizes de decisão mudou nossa pontuação completamente.”<div><em>M</em><span><b>Maria Isabel</b>Gestora — Legonautas</span></div></div>
+</div></div>
+</div></section>
 
+<section style="padding-top:20px"><div class="w"><div class="card fin"><span class="pill">● Missão FTC 2026 / 2027</span><h2>Participe da equipe e leve ela para o próximo patamar.</h2><p>Seja você uma equipe estreante buscando construir o primeiro chassi funcional ou um time veterano refinando algoritmos de visão autônoma — estamos prontos para colaborar.</p></div></div></section>
+</main>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</body></html>
+<footer><div class="w">
+<div class="fg">
+<div><b style="color:#fff;font-size:13px">LEGONAUTAS #17731</b><p>Plataforma aberta de capacitação técnica, mentoria estratégica e documentação aberta para alunos que desejam integrar na FIRST Tech Challenge (FTC).</p><span class="pill">● First Tech Challenge</span></div>
+<div><h4>Trilhas Técnicas</h4><a href="#trilhas">Design CAD &amp; Onshape</a><a href="#trilhas">Mecânica &amp; Transmissões</a><a href="#trilhas">Programação em POO</a></div>
+<div><h4>Documentação &amp; Impacto</h4><a href="#trilhas">Engineering Portfolio Modelos</a><a href="#trilhas">Apresentação para Juízes</a><a href="#entrar">Agendar Sessão Técnica</a><a href="#entrar">Servidor Discord Oficial</a></div>
+<div><h4>Conecte-se</h4><p>Siga a jornada da equipe 17731 nas competições nacionais e internacionais.</p><div class="so"><span class="ic"><svg class="i"><use
